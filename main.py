@@ -1,17 +1,21 @@
-from read_layer.file_reader import TXTFileReader
+from read_layer.file_handler import TextFileHandler
 from read_layer.format_input_validator import CommandInputValidator
-from read_layer.logger import log
-
+import logging as log
 import sys
 
-#python yourcode.py input.txt
-# sys.argv: ['main.py', 'input.txt'] (son los path a cada archivo)
+log.basicConfig(level=log.DEBUG, 
+                format='%(asctime)s: %(levelname)s [%(filename)s: line %(lineno)s] %(message)s',
+                datefmt='%I:%M:%S %p',
+                handlers=[
+                    log.FileHandler('errors.log'),
+                    log.StreamHandler()
+])
 
 if len(sys.argv) > 1:
     file_path = sys.argv[1]
-    command_input_validator = CommandInputValidator()
-    txt_file_reader = TXTFileReader(command_input_validator)
-    txt_file_reader.readFile(file_path)
+    command_input_validator = CommandInputValidator(log)
+    txt_file_handler = TextFileHandler(command_input_validator, log)
+    txt_file_handler.execute(file_path)
     
 else:
     log.error("No input recieved.")
