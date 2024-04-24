@@ -38,7 +38,7 @@ Es el punto de entrada de la aplicación.
 ## Consideraciones
 
 - Si algún comando en el archivo no es correcto o no cumple con la estructura entregada, el programa termina e informa sobre el comando inválido.
-- Si algún estudiante no se encuentra registrado y tiene una presencia, el programa termina e informa sobre estos estudiantes.
+- Si algún estudiante no se encuentra registrado y tiene una asistencia, el programa termina e informa sobre estos estudiantes.
 
 ## Ejecución de la Aplicación
 
