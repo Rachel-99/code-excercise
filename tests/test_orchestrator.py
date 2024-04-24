@@ -111,7 +111,7 @@ class TestInputMapper(unittest.TestCase):
         mock_input_mapper.map_presence_commands_to_presence_objects.assert_called_once_with(['Presence Robert 1 09:13 10:24 F201'])
         mock_student_attendance_recorder.perform_operation.assert_called_once_with({"students": ["Robert", "Juan"], "presences": [presence]})
         mock_text_file_writer.write.assert_called_once_with({"Robert": [71, 1], "Juan": [0, 0]})
-        mock_logger.info.assert_called_once_with("Robert: 71 minutes in 1 day\nJuan: 0 minutes")
+        mock_logger.info.assert_called_once_with("\nRobert: 71 minutes in 1 day\nJuan: 0 minutes")
 
             
     
