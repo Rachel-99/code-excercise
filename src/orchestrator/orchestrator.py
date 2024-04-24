@@ -46,7 +46,7 @@ class Orchestrator:
             return
         
         report_content = write_result.content
-        self._log.info(report_content)
+        self._log.info(f"\n{report_content}")
     
     def __group_commands_by_type(self, commands):
         student_commands = []
