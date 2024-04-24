@@ -11,7 +11,7 @@ La aplicación está estructurada en tres capas principales que interactúan ent
 En esta capa se realizan los siguientes procesos:
 - **Lectura de archivo**: Recibe la ruta del archivo y retorna su contenido.
 - **Validación de contenido**: Verifica que el contenido del archivo cumpla con la estructura establecida (que se presenten las palabras claves `Student` y `Presence`, que las horas y días sean válidos, etc)
-- **Mapeo de datos**: Si el contenido es válido, se mapean los comandos de estudiantes a una lista de estudiantes y los de asistencias a una lista de objetos de asistencias.
+- **Mapeo de datos**: Si el contenido es válido, se mapean los comandos de estudiantes a una lista de estudiantes y los de asistencias a una lista de estructuras de asistencias.
 
 ### Capa de Procesamiento (Process Layer)
 
@@ -38,7 +38,7 @@ Es el punto de entrada de la aplicación.
 ## Consideraciones
 
 - Si algún comando en el archivo no es correcto o no cumple con la estructura entregada, el programa termina e informa sobre el comando inválido.
-- Si algún estudiante no se encuentra registrado y tiene una presencia, el programa termina e informa sobre estos estudiantes.
+- Si algún estudiante no se encuentra registrado y tiene una asistencia, el programa termina e informa sobre estos estudiantes.
 
 ## Ejecución de la Aplicación
 
